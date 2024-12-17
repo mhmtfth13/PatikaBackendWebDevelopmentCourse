@@ -20,6 +20,7 @@ namespace FourthExercise
             Console.Write("Hangi meyveyi satin almak istersiniz ? (Elma/Armut/Cilek/Muz/Diger): ");
             secim = Console.ReadLine().ToLower();
             // Switch-Case Kullanimi
+            // Burada switch-case kullanimi okunabilirlik acisindan cok daha rahat oldugunu dusunuyorum.
             switch (secim)
             {
                 case "elma":

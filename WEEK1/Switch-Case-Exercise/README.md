@@ -1,4 +1,4 @@
-#OZET
+# OZET
 
 ## Switch - Case Egzersizi
 

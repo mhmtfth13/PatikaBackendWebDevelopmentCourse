@@ -28,7 +28,7 @@ namespace VariableUsage
                 if (identity_number.Length != 11)
                 {
                     Console.WriteLine("Sistemi lutfen tekrardan baslatin...");
-                    Environment.Exit(0);
+                    Environment.Exit(0); // uygulamayi kapatiyoruz.
                 }
             }
 
@@ -48,7 +48,7 @@ namespace VariableUsage
                 if (tel_number.Length != 10)
                 {
                     Console.WriteLine("Sistemi lutfen tekrardan baslatin...");
-                    Environment.Exit(0);
+                    Environment.Exit(0); // uygulamayi kapatiyoruz.
                 }
             }
 

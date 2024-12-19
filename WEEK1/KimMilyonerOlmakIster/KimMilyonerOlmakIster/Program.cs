@@ -15,6 +15,11 @@ namespace MilyonerOlmak
             System.Threading.Thread.Sleep(2000);
             Console.WriteLine($"1-> 2024 Yili Dunya Satranc Sampiyonu Kimdir ?(Lutfen a veyahut b sikkini giriniz..)\na)Magnus Carlsen   b)Gukesh Dommaraju");
             cevap = Console.ReadLine().ToLower();
+            if (cevap != "a" && cevap != "b")
+            {
+                Console.WriteLine("Gecersiz sik girdiniz. Lutfen a veya b giriniz.");
+                return;
+            }
             if (cevap == "b")
             {
                 Console.WriteLine("Dogru Cevapladiniz...Tebrikler");
@@ -30,6 +35,11 @@ namespace MilyonerOlmak
             System.Threading.Thread.Sleep(2000);
             Console.WriteLine("2-> Dunya Satranc Sampiyonu Gary Kasparov'un IBM tarafindan satranc oynamasi icin gelistirilen makinenin adi nedir ?(Lutfen a veyahut b sikkini giriniz..)\n a) Deep Blue    b) Eternal Blue");
             cevap = Console.ReadLine().ToLower();
+            if (cevap != "a" && cevap != "b")
+            {
+                Console.WriteLine("Gecersiz sik girdiniz. Lutfen a veya b giriniz.");
+                return;
+            }
             if (cevap == "a")
             {
                 Console.WriteLine("Dogru Cevapladiniz....");
@@ -47,6 +57,11 @@ namespace MilyonerOlmak
                 System.Threading.Thread.Sleep(2000);
                 Console.WriteLine("3-> 2013 Dunya Satranc Sampiyonu olan Magnus Carlsen, sampiyona da karsilastigi rakibi kimdir?(Lutfen a veyahut b sikkini giriniz..)\na) Viswanathan Anand   b) Sergey Karjakin ");
                 cevap = Console.ReadLine().ToLower();
+                if (cevap != "a" && cevap != "b")
+                {
+                    Console.WriteLine("Gecersiz sik girdiniz. Lutfen a veya b giriniz.");
+                    return;
+                }
                 if (cevap == "a")
                 {
                     Console.WriteLine("Dogru Cevapladiniz....");

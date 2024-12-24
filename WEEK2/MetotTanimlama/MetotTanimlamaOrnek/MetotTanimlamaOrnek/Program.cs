@@ -41,9 +41,9 @@ namespace PatikaWeek2.Metotlar.Ornek1
             Console.WriteLine($"Sonuc = {sonuc1}");
             return sonuc1;
         }
-        public static void Ornek4 (string isim, string soyisim)
+        public static void Ornek4 (string isim, string soy)
         {
-            Console.WriteLine($"Hoş Geldiniz {isim} {soyisim}");
+            Console.WriteLine($"Hoş Geldiniz {isim} {soy}");
         }
 
         

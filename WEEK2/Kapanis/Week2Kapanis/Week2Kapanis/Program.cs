@@ -2,6 +2,7 @@
 using System.ComponentModel.Design;
 using System.Diagnostics.Metrics;
 using System.Reflection.Metadata;
+using System.Threading.Channels;
 
 namespace PatikaWeek2.KapanisEgzersiz
 {
@@ -112,10 +113,10 @@ namespace PatikaWeek2.KapanisEgzersiz
             Console.WriteLine("Lutfen True/False degeri giriniz..:");
 
             bool deger2 = Convert.ToBoolean(Console.ReadLine());
-            Console.WriteLine(deger2.GetType());
+            Console.WriteLine(deger2.GetType());// Veri turunun kontrolu
             string sonuc = Metot10(deger2);
             Console.WriteLine(sonuc.ToString());
-            Console.WriteLine(sonuc.GetType());
+            Console.WriteLine(sonuc.GetType()); // Veri turunun kontrolu
             static string Metot10(bool deger2)
             {
                 string sonuc = deger2.ToString();
@@ -125,44 +126,136 @@ namespace PatikaWeek2.KapanisEgzersiz
 
             // 11 - 3 Kişinin yaşlarını alıp en yaşlı olanının yaş bilgisini dönen bir metot yazınız.
             int yas1, yas2, yas3;
-            Console.WriteLine("Lutfen 1.Kisinin yasini giriniz:");
+            Console.Write("Lutfen 1.Kisinin yasini giriniz:");
             yas1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Lutfen 2.Kisinin yasini giriniz:");
+            Console.Write("Lutfen 2.Kisinin yasini giriniz:");
             yas2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Lutfen 3.Kisinin yasini giriniz:");
+            Console.Write("Lutfen 3.Kisinin yasini giriniz:");
             yas3 = Convert.ToInt32(Console.ReadLine());
-            int yasSonuc = yasHesaplama(yas1, yas2, yas3);
-            Console.WriteLine($"Uc kisinin yas ortlamasi={yasSonuc}");
-            static int yasHesaplama(int yas1, int yas2, int yas3)
-            {
 
-                return (yas1 + yas2 + yas3)/3;
+            int Metot11Sonuc = Metot11(yas1,yas2, yas3);
+            Console.WriteLine($"En buyuk sonuc {Metot11Sonuc}");
+            static int Metot11(int yas1, int yas2, int yas3)
+            {
+                int enBuyuk = yas1;
+                if (yas2 > enBuyuk)
+                {
+                    enBuyuk = yas2;
+                }
+                if (yas3 > enBuyuk)
+                {
+                    enBuyuk = yas3;
+                }
+                return enBuyuk;
             }
 
             //12 - Kullanıcıdan sınırsız sayıda sayı alıp, bunlardan en büyüğünü ekrana yazdıran ve aynı zamanda geriye dönen bir metot yazınız.
+            Metot12();
+            static List<int> Metot12() // Integer sayilari iceren bir liste dondurur
+            {
+                List<int> sayilar = new List<int>(); //liste tanimlamasi yapilir ayni Random gibi dusunun.
 
+                while(true)
+                {
+                    Console.WriteLine("Sayi giriniz (Sonucu Gormek icin -1 Basalim)");
+                    int sayi = Convert.ToInt32(Console.ReadLine());
+                    if(sayi == -1)
+                        break;
+                    sayilar.Add(sayi);
+                }
+                Console.WriteLine(sayilar.Max());
+                return sayilar;
+            }
 
 
             //13 - Bir metot yardımıyla kullanıcıdan alınan 2 ismin yerlerini değiştiren uygulamayı yazınız.
+            string ilkDeger,ikinciDeger = string.Empty;
+            Console.Write("Lutfen ilk ismi giriniz..:");
+            ilkDeger = Console.ReadLine();
+            Console.Write("Lutfen ikinic ismi giriniz...:");
+            ikinciDeger = Console.ReadLine();
 
+            Metot13(ref ilkDeger    , ref ikinciDeger);
+            static string Metot13(ref string ilkDeger, ref string ikinciDeger)
+            {
+                string temp = ilkDeger;
+                ilkDeger = ikinciDeger;
+                ikinciDeger = ilkDeger;
 
+                Console.WriteLine($"ilkGirisDegeri {temp}, ikinci deger {ikinciDeger}");
+                return ilkDeger;
+            }
 
             //14 - Kullanıcıdan alınan sayının tek mi yoksa çift mi olduğu bilgisini(true / false) dönen bir metot.
-
+            Console.WriteLine("Lutfen sayiyi giriniz:");
+            int metotOnDortSayi = Convert.ToInt32( Console.ReadLine());
+            Metot14(metotOnDortSayi);
+            static int Metot14(int metotOnDortSayi)
+            {
+                if (metotOnDortSayi % 2 == 0)
+                {
+                    Console.WriteLine("Sayi ciftir");
+                }
+                else if (metotOnDortSayi % 2 != 0)
+                {
+                    Console.WriteLine("sayi tektir");
+                }
+                else
+                {
+                    Console.WriteLine("Hatali Giris oldu");
+                }
+                return metotOnDortSayi;
+            }
 
 
             //15 - Kullanıcıdan alınan hız ve zaman bilgileriyle , gidilen yolu hesaplayan bir metot yazınız.
-
+            Console.Write("Lutfen hizinizi giriniz:");
+            double hiz = Convert.ToDouble( Console.ReadLine());
+            Console.Write("Lutfen zaman bilginizi giriniz:");
+            double zaman= Convert.ToDouble( Console.ReadLine());
+            Console.WriteLine($"Alinan yol = {metot15(hiz,zaman)}");
+            static double metot15( double hiz, double zaman)
+            {
+                double yol = hiz * zaman;
+                return yol;
+            }
 
 
             //16 - Yarıçap bilgisi verilen bir dairenin alanını hesaplayan bir metot yazınız.
-
+            Console.Write("Lutfen dairenin yaricapini giriniz:");
+            double daireYaricapi = Convert.ToDouble( Console.ReadLine());
+            Metot16(daireYaricapi);
+            static double Metot16( double daireYaricapi)
+            {
+                double daireAlani = Math.PI * Math.Pow(daireYaricapi,2);
+                Console.WriteLine($"Dairenin alani = {daireAlani}");
+                return daireAlani;
+            }
 
 
             //17 - "Zaman bir GeRi SayIm" cümlesini alıp, hepsi büyük harf ve hepsi küçük harfle yazdırınız.
-
-
+            string cumle = "Zaman bir GeRi SayIm";
+            MetotOnYediBuyuk(cumle);
+            MetotOnYediKucuk(cumle);
+            static string MetotOnYediBuyuk(string ifade1)
+            {
+                Console.WriteLine($"{ifade1.ToUpper()}");
+                return ifade1.ToUpper();
+            }
+            static string MetotOnYediKucuk(string ifade1)
+            {
+                Console.WriteLine($"{ifade1.ToLower()}");
+                return ifade1.ToLower();
+            }
             //18 - "    Selamlar   " metnini bir değişkene atayıp, başındaki ve sonundaki boşlukları siliniz. Kalıcı olarak.
+            string soru18Deger = "    Selamlar   ";
+            Metot18(soru18Deger);
+            static string Metot18(string ifade3)
+            {
+                Console.WriteLine($"{ifade3.Trim()}");
+                return ifade3.Trim();
+            }
+
             Console.ReadKey();
         }
     }

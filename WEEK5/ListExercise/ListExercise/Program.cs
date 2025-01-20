@@ -20,7 +20,7 @@ namespace PatikaWeek5.ListExercise
             for (int i = 0; i < isimler.Length; i++)
             {
                 davetliler.Add(isimler[i]);
-                Console.ForegroundColor = ConsoleColor.Magenta; // Renk degisimi
+                Console.ForegroundColor = ConsoleColor.Red; // Renk degisimi
                 Console.Write($"{i + 1} - ");
                 Console.ResetColor(); // Renk sifirlama normal yazi icin
                 Console.WriteLine(isimler[i]);

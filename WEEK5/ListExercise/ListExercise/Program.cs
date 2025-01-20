@@ -16,6 +16,7 @@ namespace PatikaWeek5.ListExercise
                 "Tarkan",
                 "Funda Arar",
                 "Demet Akalın" };
+            Console.WriteLine("** Davetliler **");
             for (int i = 0; i < isimler.Length; i++)
             {
                 davetliler.Add(isimler[i]);

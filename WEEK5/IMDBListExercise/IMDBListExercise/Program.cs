@@ -88,7 +88,7 @@ namespace PatikaWeek5.IMDBListExercise
                         Console.WriteLine("\n=== TÜM FİLMLER ===");
                         foreach (var film in movies)
                         {
-                            Console.WriteLine($"Film: {film.Name} - IMDB Puanı: {film1.MovieRating}");
+                            Console.WriteLine($"Film: {film.Name} - IMDB Puanı: {film.MovieRating}");
                         }
 
                         // 4-9 arası IMDB puanına sahip filmleri listele

@@ -104,7 +104,7 @@ namespace PatikaWeek5.IMDBListExercise
                         Console.WriteLine("\n=== 'A' İLE BAŞLAYAN FİLMLER ===");
                         foreach (var film in movies)
                         {
-                            if (film.Name.StartsWith("A", StringComparison.OrdinalIgnoreCase)) //StartsWith --> Bir metnin belirli bir karakterle başlayıp başlamadığını kontrol eder, "A" arayacagimiz deger, StringComparison.OrdinalIgnoreCase --> Büyük-küçük harf duyarsız karşılaştırma yapmasini saglar...
+                            if (film.Name.Length > 0 && (film.Name[0] == 'A' || film.Name[0] == 'a'))
                             {
                                 Console.WriteLine($"Film: {film.Name} - IMDB Puanı: {film.MovieRating}");
                             }

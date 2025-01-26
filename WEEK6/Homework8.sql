@@ -1,0 +1,73 @@
+-- Soru 1
+-- create database test
+
+-- create table employee
+-- (
+--     id SERIAL PRIMARY KEY,
+--     name VARCHAR(100) NOT NULL,
+--     birthdate DATE NOT NULL,
+--     email VARCHAR(100)
+-- )
+
+-- Soru 2
+-- INSERT INTO employee (name, birthdate, email) VALUES 
+-- ('Christoph', '2024-09-11', 'cead0@creativecommons.org'),
+-- ('Dosi', '2024-06-12', 'dbouskill1@qq.com'),
+-- ('Henrietta', '2024-12-04', 'hsunderland2@state.gov'),
+-- ('Osbert', '2024-05-26', 'osisse3@w3.org'),
+-- ('Amity', '2024-08-19', 'astenners4@microsoft.com'),
+-- ('Buiron', '2024-02-09', 'bhaack5@google.fr'),
+-- ('Morgen', '2024-02-25', 'mkoenen6@fda.gov'),
+-- ('Celene', '2024-06-14', 'chanburry7@booking.com'),
+-- ('Luigi', '2024-12-03', 'lrakestraw8@twitter.com'),
+-- ('Emerson', '2024-02-22', 'emccrainor9@marketwatch.com'),
+-- ('Leelah', '2024-03-05', 'lmacilhaggaa@mediafire.com'),
+-- ('Julianne', '2024-11-17', 'jfairhamb@yahoo.co.jp'),
+-- ('Caryl', '2024-06-08', 'cpreshoc@issuu.com'),
+-- ('Nell', '2024-04-17', 'nyousterd@alibaba.com'),
+-- ('Leonie', '2024-02-02', 'lplumee@seesaa.net'),
+-- ('Edgar', '2024-02-02', 'ematschukf@rambler.ru'),
+-- ('Sherry', '2024-11-25', 'srowledgeg@businessinsider.com'),
+-- ('Petey', '2024-04-29', 'pbarbierh@vkontakte.ru'),
+-- ('Adda', '2024-11-14', 'afewsteri@biglobe.ne.jp'),
+-- ('Domini', '2024-10-09', 'dlegrandj@devhub.com'),
+-- ('Max', '2024-09-23', 'myallopk@oakley.com'),
+-- ('Halley', '2024-02-21', 'hbreel@dropbox.com'),
+-- ('Ana', '2024-04-14', 'ainnerstonem@woothemes.com'),
+-- ('Brit', '2024-10-24', 'beglesen@123-reg.co.uk'),
+-- ('Holmes', '2024-12-25', 'hmackindero@elegantthemes.com'),
+-- ('Nikola', '2024-03-26', 'nshinnp@moonfruit.com'),
+-- ('Leon', '2024-05-04', 'lvalentinq@mac.com'),
+-- ('Elfrida', '2024-05-08', 'ealeksandrovr@hibu.com'),
+-- ('Abey', '2024-07-22', 'aprices@businessinsider.com'),
+-- ('Baxy', '2024-07-04', 'bzukermant@ft.com'),
+-- ('Janessa', '2024-10-20', 'jdurganu@forbes.com'),
+-- ('Dane', '2024-11-23', 'dbooelnv@multiply.com'),
+-- ('Kate', '2024-02-09', 'krohfsenw@house.gov'),
+-- ('Leta', '2024-08-25', 'lpiercyx@theatlantic.com'),
+-- ('Edita', '2024-07-05', 'ejanseny@answers.com'),
+-- ('Pavia', '2024-02-24', 'psharmaz@google.com.br'),
+-- ('Idette', '2024-04-13', 'ifeake10@toplist.cz'),
+-- ('Gusty', '2024-11-12', 'gworrill11@woothemes.com'),
+-- ('Rog', '2024-07-06', 'rthorrington12@lycos.com'),
+-- ('Kellby', '2024-02-06', 'kfeldklein13@hhs.gov'),
+-- ('Deeanne', '2024-04-24', 'dtrusslove14@wp.com'),
+-- ('Mina', '2024-07-31', 'mstanyland15@bloglines.com'),
+-- ('Filippa', '2024-07-24', 'frove16@utexas.edu'),
+-- ('Zandra', '2024-05-18', 'zmerigot17@rakuten.co.jp'),
+-- ('Nikki', '2024-04-05', 'nstapley18@etsy.com'),
+-- ('Mareah', '2024-07-28', 'mtodman19@sogou.com'),
+-- ('Zebedee', '2025-01-21', 'zjarrette1a@google.cn'),
+-- ('Penelope', '2025-01-19', 'psimonich1b@unblog.fr'),
+-- ('Nonie', '2024-05-13', 'nclover1c@sphinn.com'),
+-- ('Vladimir', '2024-10-19', 'vclemetts1d@whitehouse.gov');
+
+-- Soru 3 ve Soru 4
+--TSQL
+-- DO $$
+-- BEGIN
+--     UPDATE employee SET name = 'New_' || id WHERE id <= 5;
+--     DELETE FROM employee WHERE id >= 45;
+-- END $$;
+
+-- select * from employee

@@ -24,6 +24,7 @@ namespace PatikaWeek7.LinqGroupJoinExercise
 
             var query1 = from c in classs
                          join s in students on c.ClassId equals s.ClassId into StudentGroup
+                         //Bu kısım, her bir sınıfı (c) öğrencilere (s) göre gruplayarak StudentGroup adıyla bir koleksiyon oluşturur. StudentGroup, sınıfı olan her öğrenci listesini içerir.
                          select new
                          {
                              ClassName = c.ClassName,
